@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double D: Goal Rush</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="game-wrap" aria-label="Double D Goal Rush game">
+        <canvas id="game" width="900" height="600"></canvas>
+
+        <div class="hud" aria-live="polite">
+          <div>
+            <span class="label">Level</span>
+            <strong id="level">1</strong>
+          </div>
+          <div>
+            <span class="label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span class="label">Goals</span>
+            <strong id="levelGoals">0/3</strong>
+          </div>
+          <div>
+            <span class="label">Lives</span>
+            <strong id="lives">2</strong>
+          </div>
+          <div>
+            <span class="label">Coins</span>
+            <strong id="coins">0</strong>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button id="soundBtn" type="button" aria-label="Toggle sound">Sound</button>
+          <button id="restartTopBtn" type="button" aria-label="Restart run">Restart</button>
+        </div>
+
+        <div id="message" class="message">
+          <p class="eyebrow">Double D: Goal Rush</p>
+          <h1>Colombia vs the Chaos Cup</h1>
+          <p>Beat each national team by scoring 3 times, then survive the chaos.</p>
+          <label class="level-picker" for="playerSelect">
+            <span>Who's playing?</span>
+            <select id="playerSelect">
+              <option value="derek">Derek #10</option>
+              <option value="dani">Dani #9</option>
+            </select>
+          </label>
+          <label class="level-picker" for="levelSelect">
+            <span>Test level</span>
+            <select id="levelSelect">
+              <option value="0">1. Venezuela</option>
+              <option value="1">2. Uruguay</option>
+              <option value="2">3. Brazil</option>
+              <option value="3">4. Spain</option>
+              <option value="4">5. France</option>
+              <option value="5">6. Argentina</option>
+              <option value="6">7. Mexico</option>
+              <option value="7">8. Germany</option>
+              <option value="8">9. Japan</option>
+              <option value="9">10. Portugal</option>
+            </select>
+          </label>
+          <button id="startBtn" type="button">Play</button>
+        </div>
+
+        <div class="touch-controls" aria-label="Touch controls">
+          <button id="upBtn" class="up" type="button" aria-label="Move up">▲</button>
+          <button id="leftBtn" type="button" aria-label="Move left">◀</button>
+          <button id="shootBtn" type="button" aria-label="Shoot">⚽</button>
+          <button id="rightBtn" type="button" aria-label="Move right">▶</button>
+          <button id="downBtn" class="down" type="button" aria-label="Move down">▼</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
