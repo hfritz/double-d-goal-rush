@@ -1261,6 +1261,15 @@ function loop(time) {
 }
 
 window.addEventListener("resize", resizeCanvas);
+window.addEventListener("orientationchange", resizeCanvas);
+
+const dismissRotateBtn = document.querySelector("#dismissRotate");
+if (dismissRotateBtn) {
+  dismissRotateBtn.addEventListener("click", () => {
+    document.body.classList.add("rotate-dismissed");
+    resizeCanvas();
+  });
+}
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft" || event.key.toLowerCase() === "a") moveLane(-1);
   if (event.key === "ArrowRight" || event.key.toLowerCase() === "d") moveLane(1);

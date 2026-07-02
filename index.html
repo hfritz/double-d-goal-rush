@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="rotateHint" class="rotate-hint">
+      <div class="rotate-card">
+        <span class="rotate-icon" aria-hidden="true">🔄</span>
+        <p>Double D: Goal Rush looks best in landscape. Rotate your phone for the full-size field.</p>
+        <button id="dismissRotate" type="button">Play in portrait</button>
+      </div>
+    </div>
     <main class="shell">
       <section class="game-wrap" aria-label="Double D Goal Rush game">
         <canvas id="game" width="900" height="600"></canvas>
